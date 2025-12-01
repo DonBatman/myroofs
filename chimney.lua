@@ -1,5 +1,5 @@
 --Chimney
-minetest.register_node("myroofs:brick_chimney", {
+core.register_node("myroofs:brick_chimney", {
 		description = "Brick Chimney",
 		tiles = {
 			"default_brick.png",
@@ -19,7 +19,7 @@ minetest.register_node("myroofs:brick_chimney", {
 	}
 })
 --Chimney
-minetest.register_node("myroofs:stone_chimney", {
+core.register_node("myroofs:stone_chimney", {
 		description = "Stone Brick Chimney",
 		tiles = {
 			"default_stone_brick.png",
@@ -39,7 +39,7 @@ minetest.register_node("myroofs:stone_chimney", {
 	}
 })
 --Chimney Top
-minetest.register_node("myroofs:chimney_top", {
+core.register_node("myroofs:chimney_top", {
 		description = "Chimney Top",
 		tiles = {
 			"default_stone_brick.png",
@@ -59,7 +59,7 @@ minetest.register_node("myroofs:chimney_top", {
 	}
 })
 --Chimney Top 2
-minetest.register_node("myroofs:chimney_top2", {
+core.register_node("myroofs:chimney_top2", {
 		description = "Chimney Top 2",
 		tiles = {
 			"default_clay.png",
@@ -79,7 +79,7 @@ minetest.register_node("myroofs:chimney_top2", {
 	}
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:brick_chimney 6",
 	recipe ={
 			{"default:brick","","default:brick"},
@@ -87,7 +87,7 @@ minetest.register_craft({
 			{"default:brick","","default:brick"},
 			}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:stone_chimney 6",
 	recipe ={
 			{"default:stonebrick","","default:stonebrick"},
@@ -95,7 +95,7 @@ minetest.register_craft({
 			{"default:stonebrick","","default:stonebrick"},
 			}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:chimney_top 6",
 	recipe ={
 			{"","",""},
@@ -103,7 +103,7 @@ minetest.register_craft({
 			{"default:stonebrick","","default:stonebrick"},
 			}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:chimney_top2 6",
 	recipe ={
 			{"","",""},

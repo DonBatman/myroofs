@@ -11,7 +11,7 @@ for i in ipairs (asphalt_shingles) do
 
 
 -- Asphalt Bundle
-minetest.register_node("myroofs:asphalt_shingle_"..color.."_bundle", {
+core.register_node("myroofs:asphalt_shingle_"..color.."_bundle", {
 	description = desc.." Asphalt Shingle bundle",
 	drawtype = "normal",
 	tiles = {"myroofs_asphalt_shingle_"..color..".png"},
@@ -19,10 +19,10 @@ minetest.register_node("myroofs:asphalt_shingle_"..color.."_bundle", {
 	paramtype2 = "facedir",
 	groups = {choppy=2, oddly_breakable_by_hand=2},
 	sounds = default.node_sound_wood_defaults(),
---	on_place = minetest.rotate_node,
+--	on_place = core.rotate_node,
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:asphalt_shingle_"..color.."_bundle 4",
 	recipe = {
 		{"default:gravel", "default:coal_lump","default:gravel"},
@@ -33,7 +33,7 @@ minetest.register_craft({
 end
 
 --Grey Round Asphalt
-minetest.register_node("myroofs:asphalt_shingle_grey_round_bundle", {
+core.register_node("myroofs:asphalt_shingle_grey_round_bundle", {
 	description = "Grey Round Asphalt Shingle bundle",
 	drawtype = "normal",
 	tiles = {"myroofs_asphalt_shingle_grey_round.png"},
@@ -41,10 +41,10 @@ minetest.register_node("myroofs:asphalt_shingle_grey_round_bundle", {
 	paramtype2 = "facedir",
 	groups = {choppy=2, oddly_breakable_by_hand=2},
 	sounds = default.node_sound_wood_defaults(),
---	on_place = minetest.rotate_node,
+--	on_place = core.rotate_node,
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:asphalt_shingle_grey_round_bundle 4",
 	recipe = {
 		{"", "myroofs:asphalt_shingle_grey_bundle",""},
@@ -53,7 +53,7 @@ minetest.register_craft({
 	}
 })
 --Dark Grey Round Asphalt
-minetest.register_node("myroofs:asphalt_shingle_dark_grey_round_bundle", {
+core.register_node("myroofs:asphalt_shingle_dark_grey_round_bundle", {
 	description = "Dark Grey Round Asphalt Shingle bundle",
 	drawtype = "normal",
 	tiles = {"myroofs_asphalt_shingle_dark_grey_round.png"},
@@ -62,7 +62,7 @@ minetest.register_node("myroofs:asphalt_shingle_dark_grey_round_bundle", {
 	groups = {choppy=2, oddly_breakable_by_hand=2},
 	sounds = default.node_sound_wood_defaults(),
 })
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:asphalt_shingle_dark_grey_round_bundle 4",
 	recipe = {
 		{"", "myroofs:asphalt_shingle_dark_grey_bundle",""},
@@ -71,7 +71,7 @@ minetest.register_craft({
 	}
 })
 --Dark straw
-minetest.register_node("myroofs:straw_dark", {
+core.register_node("myroofs:straw_dark", {
 	description = "Dark Straw",
 	drawtype = "normal",
 	tiles = {"myroofs_straw_dark.png"},
@@ -81,7 +81,7 @@ minetest.register_node("myroofs:straw_dark", {
 	sounds = default.node_sound_wood_defaults(),
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:straw_dark 1",
 	recipe = {
 		{"farming:straw", "dye:black",""},
@@ -90,7 +90,7 @@ minetest.register_craft({
 	}
 })
 --Reet
-minetest.register_node("myroofs:reet", {
+core.register_node("myroofs:reet", {
 	description = "Reet",
 	drawtype = "normal",
 	tiles = {"myroofs_reet.png"},
@@ -100,7 +100,7 @@ minetest.register_node("myroofs:reet", {
 	sounds = default.node_sound_wood_defaults(),
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:reet 1",
 	recipe = {
 		{"farming:straw", "dye:brown",""},
@@ -108,7 +108,7 @@ minetest.register_craft({
 		{"", "",""},
 	}
 })
-minetest.register_node("myroofs:copper_roofing", {
+core.register_node("myroofs:copper_roofing", {
 	description = "Copper Roofing",
 	drawtype = "normal",
 	tiles = {"myroofs_copper.png"},
@@ -117,7 +117,7 @@ minetest.register_node("myroofs:copper_roofing", {
 	groups = {choppy=2, oddly_breakable_by_hand=2},
 	sounds = default.node_sound_wood_defaults(),
 })
-minetest.register_node("myroofs:green_copper_roofing", {
+core.register_node("myroofs:green_copper_roofing", {
 	description = "Green Copper Roofing",
 	drawtype = "normal",
 	tiles = {"myroofs_green_copper.png"},
@@ -126,7 +126,7 @@ minetest.register_node("myroofs:green_copper_roofing", {
 	groups = {choppy=2, oddly_breakable_by_hand=2},
 	sounds = default.node_sound_wood_defaults(),
 })
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:copper_roofing",
 	recipe = {
 		{"default:copper_ingot", "",""},
@@ -134,7 +134,7 @@ minetest.register_craft({
 		{"default:copper_ingot", "",""},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "myroofs:green_copper_roofing",
 	recipe = {
 		{"default:copper_ingot", "dye:green",""},
