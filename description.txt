@@ -1,1 +1,0 @@
-This is a Luanti mod that adds mesh roofing nodes.
