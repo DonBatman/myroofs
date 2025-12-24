@@ -8,6 +8,14 @@ local slope_cbox = {
 	}
 }
 
+local peak_cbox = {
+	type = "fixed",
+	fixed = {
+		{-0.5,  -0.5,  -0.5, 0.5, -0.25, 0.5},
+		{-0.5, -0.25, -0.25, 0.5,     0, 0.25},
+	}
+}
+
 local icorner_cbox = {
 	type = "fixed",
 	fixed = {
@@ -62,6 +70,21 @@ core.register_node("myroofs:shingle_roof_"..col, {
 --	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
+})
+
+--Peak
+core.register_node("myroofs:shingle_roof_peak_"..col, {
+	description = des.." Shingle Roof Peak",
+	drawtype = "mesh",
+	mesh = "myroofs_peak.obj",
+	tiles = {"myroofs_shingles_"..col..".png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {choppy=2, oddly_breakable_by_hand=2, flammable=3},
+	sounds = default.node_sound_wood_defaults(),
+--	on_place = core.rotate_node,
+	collision_box = peak_cbox,
+	selection_box = peak_cbox
 })
 
 --Outside Corner

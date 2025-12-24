@@ -8,6 +8,22 @@ local slope_cbox = {
 	}
 }
 
+local peak_cbox = {
+	type = "fixed",
+	fixed = {
+		{-0.5,  -0.5,  -0.5, 0.5, -0.25, 0.5},
+		{-0.5, -0.25, -0.25, 0.5,     0, 0.25},
+	}
+}
+
+local long_peak_cbox = {
+	type = "fixed",
+	fixed = {
+		{-0.5,  -0.5,  -0.5, 0.5, -0.25, 1.5},
+		{-0.5, -0.25, -0.25, 0.5,     0, 1.25},
+	}
+}
+
 local slope_cbox_long = {
 	type = "fixed",
 	fixed = {
@@ -108,6 +124,21 @@ core.register_node("myroofs:asphalt_shingle_"..color, {
 	selection_box = slope_cbox
 })
 
+--Peak
+core.register_node("myroofs:asphalt_shingle_peak_"..color, {
+	description = desc.." Asphalt Shingle Peak",
+	drawtype = "mesh",
+	mesh = "myroofs_peak.obj",
+	tiles = {"myroofs_asphalt_shingle_"..color..".png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {choppy=2, oddly_breakable_by_hand=2, flammable=3},
+	sounds = default.node_sound_wood_defaults(),
+--	on_place = core.rotate_node,
+	collision_box = peak_cbox,
+	selection_box = peak_cbox
+})
+
 --Outside Corner
 core.register_node("myroofs:asphalt_shingle_"..color.."_ocorner", {
 	description = desc.." Asphalt Shingle Outside Corner",
@@ -163,6 +194,21 @@ core.register_node("myroofs:asphalt_shingle_"..color.."_long", {
 --	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
+})
+
+--Long peak
+core.register_node("myroofs:asphalt_shingle_"..color.."_long_peak", {
+	description = desc.." Asphalt Shingle Long Peak",
+	drawtype = "mesh",
+	mesh = "myroofs_long_peak.obj",
+	tiles = {"myroofs_asphalt_shingle_"..color..".png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {choppy=2, oddly_breakable_by_hand=2, flammable=3},
+	sounds = default.node_sound_wood_defaults(),
+--	on_place = core.rotate_node,
+	collision_box = long_peak_cbox,
+	selection_box = long_peak_cbox
 })
 
 --Long Inside Corner
