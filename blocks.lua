@@ -10,6 +10,17 @@ for i in ipairs (asphalt_shingles) do
 	local dyes = asphalt_shingles[i][3]
 
 
+if core.get_modpath("mystreets") then
+	core.register_craft({
+		output = "myroofs:asphalt_shingle_"..color.."_bundle 4",
+		recipe = {
+			{"default:gravel", "mystreets:tar","dye:"..dyes},
+			{"", "",""},
+			{"", "",""},
+		}
+	})
+end
+
 -- Asphalt Bundle
 core.register_node("myroofs:asphalt_shingle_"..color.."_bundle", {
 	description = desc.." Asphalt Shingle bundle",

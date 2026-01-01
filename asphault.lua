@@ -268,6 +268,16 @@ core.register_craft({
 	}
 })
 
+--Peak
+core.register_craft({
+	output = "myroofs:asphalt_shingle_peak_"..color.." 2",
+	recipe = {
+		{"", "",""},
+		{"", "myroofs:asphalt_shingle_"..color.."_bundle",""},
+		{"myroofs:asphalt_shingle_"..color.."_bundle", "","myroofs:asphalt_shingle_"..color.."_bundle"},
+	}
+})
+
 --Inside Corner
 core.register_craft({
 	output = "myroofs:asphalt_shingle_"..color.."_icorner 3",
@@ -309,6 +319,17 @@ core.register_craft({
 		{"myroofs:asphalt_shingle_"..color.."_bundle", "myroofs:asphalt_shingle_"..color.."_bundle","myroofs:asphalt_shingle_"..color.."_bundle"},
 	}
 })
+
+--Long Peak
+core.register_craft({
+	output = "myroofs:asphalt_shingle_"..color.."_long_peak 3",
+	recipe = {
+		{"", "",""},
+		{"", "myroofs:asphalt_shingle_"..color.."_bundle",""},
+		{"myroofs:asphalt_shingle_"..color.."_bundle", "myroofs:asphalt_shingle_"..color.."_bundle","myroofs:asphalt_shingle_"..color.."_bundle"},
+	}
+})
+
 --Long Inside Corner
 core.register_craft({
 	output = "myroofs:asphalt_shingle_"..color.."_long_icorner 2",

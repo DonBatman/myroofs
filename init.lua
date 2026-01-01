@@ -9,3 +9,5 @@ dofile(core.get_modpath("myroofs").."/shingles.lua")
 core.register_alias("myroofs:asphalt_shingle_hd_asphalt", "homedecor:shingles_asphalt")
 core.register_alias("myroofs:asphalt_shingle_hd_terracotta", "homedecor:shingles_terracotta")
 core.register_alias("myroofs:asphalt_shingle_hd_wood", "homedecor:shingles_wood")
+
+	

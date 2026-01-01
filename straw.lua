@@ -241,6 +241,16 @@ core.register_craft({
 	}
 })
 
+--Peak
+core.register_craft({
+	output = "myroofs:"..color.."_roof_peak 6",
+	recipe = {
+		{"","",""},
+		{"",item,""},
+		{item,item,item},
+	}
+})
+
 --Outside Corner
 core.register_craft({
 	output = "myroofs:"..color.."_roof_ocorner 5",
@@ -269,6 +279,16 @@ core.register_craft({
 	recipe = {
 		{"", "",""},
 		{"", item,item},
+		{item, item,item},
+	}
+})
+
+--Long Peak
+core.register_craft({
+	output = "myroofs:"..color.."_roof_long_peak 3",
+	recipe = {
+		{"", item,""},
+		{item, item,item},
 		{item, item,item},
 	}
 })

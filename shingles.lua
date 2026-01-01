@@ -145,6 +145,16 @@ core.register_craft({
 	}
 })
 
+--Peak
+core.register_craft({
+	output = "myroofs:shingle_roof_peak_"..col.." 3",
+	recipe = {
+		{"","",""},
+		{"","myroofs:shingle_roof_"..col,""},
+		{"myroofs:shingle_roof_"..col,"myroofs:shingle_roof_"..col,"myroofs:shingle_roof_"..col},
+	}
+})
+
 --Outside Corner
 core.register_craft({
 	output = "myroofs:shingle_roof_ocorner_"..col.." 3",
