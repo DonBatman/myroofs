@@ -130,7 +130,15 @@ core.register_node("myroofs:shingle_roof_eve_"..col, {
 	collision_box = eve_cbox,
 	selection_box = eve_cbox
 })
-
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"myroofs:shingle_roof_"..col}, 15},
+		{"dro", {"myroofs:shingle_roof_peak_"..col}, 15},
+		{"dro", {"myroofs:shingle_roof_ocorner_"..col}, 15},
+		{"dro", {"myroofs:shingle_roof_icorner_"..col}, 15},
+		{"dro", {"myroofs:shingle_roof_eve_"..col}, 15},
+	})
+end
 ------------------------------------------------------------------------------------
 --Crafts
 ------------------------------------------------------------------------------------

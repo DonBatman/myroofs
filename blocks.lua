@@ -41,6 +41,12 @@ core.register_craft({
 		{"default:gravel", "default:gravel","dye:"..dyes},
 	}
 })
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"myroofs:asphalt_shingle_"..color.."_bundle"}, 15},
+	})
+end
 end
 
 --Grey Round Asphalt
@@ -153,3 +159,14 @@ core.register_craft({
 		{"default:copper_ingot", "",""},
 	}
 })
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"myroofs:asphalt_shingle_grey_round_bundle"}, 15},
+		{"dro", {"myroofs:asphalt_shingle_dark_grey_round_bundle"}, 15},
+		{"dro", {"myroofs:straw_dark"}, 15},
+		{"dro", {"myroofs:reet"}, 15},
+		{"dro", {"myroofs:copper_roofing"}, 15},
+		{"dro", {"myroofs:green_copper_roofing"}, 15},
+	})
+end

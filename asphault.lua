@@ -168,6 +168,14 @@ core.register_node("myroofs:asphalt_shingle_"..color.."_icorner", {
 	collision_box = icorner_cbox,
 	selection_box = icorner_cbox
 })
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"myroofs:asphalt_shingle_"..color}, 15},
+		{"dro", {"myroofs:asphalt_shingle_peak_"..color}, 15},
+		{"dro", {"myroofs:asphalt_shingle_"..color.."_ocorner"}, 15},
+		{"dro", {"myroofs:asphalt_shingle_"..color.."_icorner"}, 15},
+	})
+end
 end
 local asphalt_lslope = { --desc, color, img
 	{"Grey", "grey"},
@@ -241,6 +249,14 @@ core.register_node("myroofs:asphalt_shingle_"..color.."_long_ocorner", {
 	selection_box = ocorner_cbox_long
 })
 
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"myroofs:asphalt_shingle_"..color.."_long"}, 15},
+		{"dro", {"myroofs:asphalt_shingle_"..color.."_long_peak"}, 15},
+		{"dro", {"myroofs:asphalt_shingle_"..color.."_long_icorner"}, 15},
+		{"dro", {"myroofs:asphalt_shingle_"..color.."_long_ocorner"}, 15},
+	})
+end
 end
 
 -----------------------------------------------------------------------------

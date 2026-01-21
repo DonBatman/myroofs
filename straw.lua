@@ -226,7 +226,18 @@ core.register_node("myroofs:"..color.."_roof_long_ocorner", {
 	collision_box = ocorner_cbox_long,
 	selection_box = ocorner_cbox_long
 })
-
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"myroofs:"..color.."_roof"}, 15},
+		{"dro", {"myroofs:"..color.."_roof_peak"}, 15},
+		{"dro", {"myroofs:"..color.."_roof_ocorner"}, 15},
+		{"dro", {"myroofs:"..color.."_roof_icorner"}, 15},
+		{"dro", {"myroofs:"..color.."_roof_long"}, 15},
+		{"dro", {"myroofs:"..color.."_roof_long_peak"}, 15},
+		{"dro", {"myroofs:"..color.."_roof_long_icorner"}, 15},
+		{"dro", {"myroofs:"..color.."_roof_long_ocorner"}, 15},
+	})
+end
 ------------------------------------------------------------------------------------
 --Crafts
 ------------------------------------------------------------------------------------

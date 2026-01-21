@@ -99,7 +99,14 @@ core.register_node("myroofs:teja_roof_eve", {
 	collision_box = eve_cbox,
 	selection_box = eve_cbox
 })
-
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"myroofs:teja_roof"}, 15},
+		{"dro", {"myroofs:teja_roof_ocorner"}, 15},
+		{"dro", {"myroofs:teja_roof_icorner"}, 15},
+		{"dro", {"myroofs:teja_roof_eve"}, 15},
+	})
+end
 ------------------------------------------------------------------------------------
 --Crafts
 ------------------------------------------------------------------------------------

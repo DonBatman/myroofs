@@ -111,3 +111,10 @@ core.register_craft({
 			{"default:stone","","default:stone"},
 			}
 })
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"myroofs:brick_chimney"}, 5},
+		{"dro", {"myroofs:stone_chimney"}, 5},
+	})
+end
